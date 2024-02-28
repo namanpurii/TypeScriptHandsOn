@@ -1,0 +1,24 @@
+Install Typescript: https://www.typescriptlang.org/download
+
+TypeScript compatible Transpilers: 
+
+Tools like Babel, swc and Sucrase can transpile your TS files to JS for speed and 
+consistency with your existing building tools. These handle file conversion but do
+not handle the type-checking aspects of the TypeScript compiler (tsc). So it's likely
+that you will still need to keep the above TypeScript dependency around, and you will
+want to enable isolatedModules.
+
+What is TypeScript ?
+
+ - Javascript is a dynamically typed language that is the types of a variable are 
+   inferred at the run-time. This makes JS difficult to work with as it makes it slower
+   to compile as compared to its statically typed counterparts like C++, Java, etc. Also,
+   makes room for gazillion errors that are never caught if not at the runtime itself.
+
+ - Typescript brings the power of static typing to Javascript by checking types at the
+   compile time and raising errors which is not native to vanilla JS. At the same time, 
+   doesnt affect the output of your intended JS code because eventually the typescript
+   compiler not only checks for any type errors and most native JS runtime errors at 
+   runtime but also transpiles your TS code to equivalent JS code(CommonJS or ESM is configurable)
+
+ 
