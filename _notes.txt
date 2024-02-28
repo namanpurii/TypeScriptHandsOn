@@ -21,4 +21,8 @@ What is TypeScript ?
    compiler not only checks for any type errors and most native JS runtime errors at 
    runtime but also transpiles your TS code to equivalent JS code(CommonJS or ESM is configurable)
 
- 
+Interfaces in TypeScript:
+
+In TypeScript, two types are compatible if their internal structure is compatible. This 
+allows us to implement an interface just by having the shape the interface requires, without
+an explicit implements clause.
