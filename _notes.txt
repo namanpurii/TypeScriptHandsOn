@@ -8,7 +8,10 @@ not handle the type-checking aspects of the TypeScript compiler (tsc). So it's l
 that you will still need to keep the above TypeScript dependency around, and you will
 want to enable isolatedModules.
 
-What is TypeScript ?
+What is TypeScript ? A static typechecker for Javascript programs
+ - Static types systems describe the shapes and behaviors of what our 
+   values will be when we run our programs. A type-checker like TypeScript uses that
+   information and tells us when things might be going off the rails.
 
  - Javascript is a dynamically typed language that is the types of a variable are 
    inferred at the run-time. This makes JS difficult to work with as it makes it slower
