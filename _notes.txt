@@ -29,3 +29,11 @@ Interfaces in TypeScript:
 In TypeScript, two types are compatible if their internal structure is compatible. This 
 allows us to implement an interface just by having the shape the interface requires, without
 an explicit implements clause.
+
+Why does TypeScript need a compiler in the first place?
+
+Type annotations aren’t part of JavaScript (or ECMAScript to be pedantic), so there really
+aren’t any browsers or other runtimes that can just run TypeScript unmodified. That’s why
+TypeScript needs a compiler in the first place - it needs some way to strip out or 
+transform any TypeScript-specific code so that you can run it. Most TypeScript-specific
+code gets erased away, and likewise, the type annotations are also completely erased.
