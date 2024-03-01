@@ -37,3 +37,5 @@ aren’t any browsers or other runtimes that can just run TypeScript unmodified.
 TypeScript needs a compiler in the first place - it needs some way to strip out or 
 transform any TypeScript-specific code so that you can run it. Most TypeScript-specific
 code gets erased away, and likewise, the type annotations are also completely erased.
+
+Strictness: https://www.typescriptlang.org/docs/handbook/2/basic-types.html#strictness
