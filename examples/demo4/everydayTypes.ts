@@ -156,6 +156,7 @@ function isThisAnimalABird(animal: Bird) : boolean {
 }
 
 const res = isThisAnimalABird({name: "elephant", hasWings: false})
+export {} // because with cjs the declarations leak globally and it becomes hard to work with the same variable names in different files. This just helps convert it to ESM(https://bobbyhadz.com/blog/typescript-duplicate-identifier)
 
 // Learn more about such examples here: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces
 // For the most part, you can choose based on personal preference, and TypeScript will 
