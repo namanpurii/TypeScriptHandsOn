@@ -57,4 +57,35 @@ const cats: Record<Keys, someTypeType> = {
     grey: {age: 10, breed: "Persian"}
 }
 
-// t.b.d
+// 6. Pick<Type, Keys>
+// Constructs a type by picking a set of properties(string literals or union of string literals) from Type
+
+interface someType3 {
+    name: string,
+    age: number,
+    isMale: boolean,
+}
+
+type typeWithNoGenderProp = Pick<someType3, "name" | "age">
+
+// 7. Omit<Type, Keys> 
+// This is the opposite of Pick as it removes the set of properties(i.e. specified by string literals or union of string literals) from Type
+
+type typeWithOnlyGenderProp = Omit<someType3, "name" | "age">
+
+// 8. Exclude<UnionType, ExcludedMembers>
+// Constructs a type from a Union Type by excluding certain members of the UnionType which is specified in the syntax as `ExcludedMembers`
+
+type T0 = string | boolean | number
+type anotherType = Exclude<T0, string | number>
+
+// 9. Extract<Type, Union>
+// Basically constructs a type which is an intersection of `Type` and `Union`
+
+type someOtherType = Extract<T0, string | number | (string|number)[]>
+
+// 10. NonNullable<Type>
+// Constructs a type by excluding null and undefined from Type
+const someVal: NonNullable<string | null | undefined> = "jack"
+
+
